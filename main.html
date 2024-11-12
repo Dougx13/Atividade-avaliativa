@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo - TechSolutions</title>
+    <link rel="stylesheet" href="admin_estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Painel Administrativo - TechSolutions</h1>
+        <h2>Bem Vindo <span id="msgusuario"></span>! </h2>
+        <button onclick="sair()">Sair</button>
+    </header>
+
+    <section class="company-info">
+        <h2>Visão Geral da Empresa</h2>
+        <p><strong>Missão:</strong> Transformar empresas por meio da tecnologia, oferecendo soluções personalizadas para impulsionar produtividade e inovação.</p>
+        <p><strong>Visão:</strong> Tornar-se uma referência em soluções tecnológicas, conhecida pela inovação e compromisso com o sucesso dos clientes.</p>
+        <p><strong>Valores:</strong> Inovação, ética, qualidade e colaboração.</p>
+    </section>
+
+    <section class="user-list">
+        <h2>Usuários Cadastrados</h2>
+        <table id="userTable">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+           
+        </table>
+    </section>
+
+    <section class="theme-control">
+        <h2>Controle de Tema</h2>
+        <p>Escolha a cor do tema:</p>
+        <button onclick="mudarCor('#3498db')">Azul</button>
+        <button onclick="mudarCor('#2ecc71')">Verde</button>
+        <button onclick="mudarCor('#e74c3c')">Vermelho</button>
+    </section>
+
+    <script src="admin_script.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - TechSolutions</title>
+    <link rel="shortcut icon" href="./imgs_ult/icons8-cogumelo-24.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <img src="./imgs_ult/logo.png" alt="TechSolutions Logo">
+            </div>
+            <h1>TechSolutions</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="./principal.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./produtos.html">Produtos</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="#" onclick="goToLogin()">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+     
+        <section class="carousel">
+            <div class="carousel-images">
+                <img src="imgs_ult/tec7.jfif" alt="Soluções de TI" class="active">
+                <img src="imgs_ult/tec8.png" alt="Tecnologia Avançada">
+                <img src="imgs_ult/TechSolutions logo (1).png" alt="Transformação Digital">
+            </div>
+            <div class="carousel-controls">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+     
+        <section class="about">
+            <h2>Sobre a TechSolutions</h2>
+            <p>TechSolutions é uma empresa de tecnologia focada em desenvolver soluções inovadoras para empresas de diversos setores. Fundada em 2010, nossa missão é ajudar negócios a se adaptarem às rápidas mudanças tecnológicas e prosperarem no mundo digital.</p>
+            <a href="./sobre.html" class="btn">Saiba Mais</a>
+        </section>
+
+    
+        <section class="services">
+            <h2>Serviços que Oferecemos</h2>
+            <div class="service-items">
+                <div class="service-item">
+                    <img src="imgs_ult/tec4.jfif" alt="Consultoria de TI">
+                    <h3>Consultoria de TI</h3>
+                    <p>Estratégias personalizadas para aprimorar seu desempenho digital.</p>
+                </div>
+                <div class="service-item">
+                    <img src="imgs_ult/tec5.jfif"" alt="Desenvolvimento de Software">
+                    <h3>Desenvolvimento de Software</h3>
+                    <p>Soluções eficientes e seguras para atender as necessidades do seu negócio.</p>
+                </div>
+                <div class="service-item">
+                    <img src="imgs_ult/tec6.jfif"" alt="Segurança Cibernética">
+                    <h3>Segurança Cibernética</h3>
+                    <p>Proteção completa para seus dados e sistemas digitais.</p>
+                </div>
+            </div>
+        </section>
+
+ ]
+        <section class="team">
+            <h2>Nosso Ambiente</h2>
+            <p>Conheça os Ambientes que fazem a TechSolutions ser possível.</p>
+            <div class="team-members">
+                <div class="member">
+                    <img src="imgs_ult/tec1.jfif" alt="CEO">
+         
+                </div>
+                <div class="member">
+                    <img src="imgs_ult/tec2.jfif"" alt="CTO">
+              
+                </div>
+                <div class="member">
+                    <img src="imgs_ult/tec3.jfif"" alt="Head de Segurança">
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechSolutions - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+       
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function goToLogin() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

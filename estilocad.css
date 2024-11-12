@@ -1,0 +1,138 @@
+/* Configurações globais */
+:root {
+    --bg-color: #141414;
+    --form-bg-color: rgba(0, 0, 0, 0.8);
+    --text-color: #e0e0e0;
+    --label-color: #856161;
+    --input-bg-color: #333;
+    --input-bg-color-focus: #444;
+    --button-color: #e50914;
+    --button-color-hover: #f6121d;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #000000, #256864, #1e1e1e);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite; /* Animação do gradiente */
+}
+
+/* Animação do fundo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilo do Container do Formulário */
+.form-container {
+    width: 100%;
+    max-width: 360px;
+    padding: 40px;
+    background-color: var(--form-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título do Formulário */
+.form-container h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Estilo dos rótulos do formulário */
+.form-container label {
+    display: block;
+    text-align: left;
+    color: var(--label-color);
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* Estilo dos campos de entrada */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    background-color: var(--input-bg-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus {
+    background-color: var(--input-bg-color-focus);
+    border: 1px solid var(--button-color);
+}
+
+/* Botão de Envio */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-color);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: var(--button-color-hover);
+}
+
+/* Parágrafo e Links */
+.form-container p {
+    font-size: 14px;
+    color: var(--label-color);
+    margin-top: 25px;
+}
+
+/* Link para cadastro/login */
+.form-container p a {
+    color: var(--button-color);
+    text-decoration: none;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-container button {
+        font-size: 16px;
+    }
+}
